@@ -1,0 +1,66 @@
+{
+  "name": "svt-texttv-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for SVT Text-TV - Access Swedish teletext content (news, sports, weather, TV schedules) through the Model Context Protocol",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "svt-texttv-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.en.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "start:http": "node dist/http-server.js",
+    "dev": "tsx src/index.ts",
+    "dev:http": "tsx src/http-server.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "texttv",
+    "text-tv",
+    "svt",
+    "swedish",
+    "teletext",
+    "news",
+    "sports",
+    "weather"
+  ],
+  "author": "Isak Skogstad",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isakskogstad/svt-texttv-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/isakskogstad/svt-texttv-mcp/issues"
+  },
+  "homepage": "https://github.com/isakskogstad/svt-texttv-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "express": "^4.18.2",
+    "texttv-api": "file:../svt-texttv-api",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.1",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "$schema": "https://registry.modelcontextprotocol.io/schemas/server.json",
+  "name": "io.github.isakskogstad/svt-texttv",
+  "version": "1.0.0",
+  "display_name": "SVT Text-TV",
+  "description": "Access Swedish SVT Text-TV content - news, sports, weather, and TV schedules",
+  "description_long": "MCP server for SVT Text-TV. Provides tools to fetch Swedish teletext content including news (domestic and foreign), sports (football, hockey, results), weather forecasts (national and regional), and TV schedules (SVT1, SVT2). Data is sourced from texttv.nu.",
+  "repository": "https://github.com/isakskogstad/svt-texttv-mcp",
+  "homepage": "https://github.com/isakskogstad/svt-texttv-mcp",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Isak Skogstad",
+      "url": "https://github.com/isakskogstad"
+    }
+  ],
+  "keywords": [
+    "texttv",
+    "text-tv",
+    "svt",
+    "sweden",
+    "swedish",
+    "news",
+    "sports",
+    "weather",
+    "teletext"
+  ],
+  "categories": [
+    "data",
+    "media",
+    "news"
+  ],
+  "installations": {
+    "npm": {
+      "type": "npm",
+      "package_name": "svt-texttv-mcp",
+      "command": "npx",
+      "args": ["-y", "svt-texttv-mcp"]
+    },
+    "remote": {
+      "type": "http",
+      "deployments": {
+        "render": {
+          "url": "https://svt-texttv-mcp.onrender.com/mcp"
+        }
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "texttv_get_page",
+      "description": "Get a specific Text-TV page by number (100-899)"
+    },
+    {
+      "name": "texttv_get_subpages",
+      "description": "Get all subpage versions of a Text-TV page"
+    },
+    {
+      "name": "texttv_get_news",
+      "description": "Get news from Text-TV (main, domestic, foreign)"
+    },
+    {
+      "name": "texttv_get_sports",
+      "description": "Get sports content (main, football, hockey, results)"
+    },
+    {
+      "name": "texttv_get_weather",
+      "description": "Get weather forecasts (national, stockholm, gothenburg, malmo)"
+    },
+    {
+      "name": "texttv_get_tv_schedule",
+      "description": "Get TV schedules (svt1, svt2, both)"
+    },
+    {
+      "name": "texttv_search",
+      "description": "Search across Text-TV pages"
+    },
+    {
+      "name": "texttv_browse_category",
+      "description": "Browse pages in a Text-TV category"
+    }
+  ],
+  "resources": [
+    {
+      "uri": "texttv://categories",
+      "name": "Text-TV Categories"
+    },
+    {
+      "uri": "texttv://news/latest",
+      "name": "Latest News"
+    },
+    {
+      "uri": "texttv://sports/latest",
+      "name": "Latest Sports"
+    },
+    {
+      "uri": "texttv://weather/national",
+      "name": "National Weather"
+    },
+    {
+      "uri": "texttv://tv/today",
+      "name": "Today's TV Schedule"
+    }
+  ],
+  "prompts": [
+    {
+      "name": "swedish_news_summary",
+      "description": "Get a summary of current Swedish news"
+    },
+    {
+      "name": "sports_update",
+      "description": "Get latest sports updates"
+    },
+    {
+      "name": "weather_forecast",
+      "description": "Get Swedish weather forecast"
+    },
+    {
+      "name": "tv_tonight",
+      "description": "Get tonight's TV schedule"
+    },
+    {
+      "name": "texttv_page",
+      "description": "Analyze content from a specific page"
+    }
+  ]
+}
