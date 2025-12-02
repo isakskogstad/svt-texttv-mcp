@@ -49,7 +49,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "express": "^4.18.2",
-    "texttv-api": "file:../svt-texttv-api",
+    "texttv-api": "^0.1.0",
     "zod": "^3.23.0"
   },
   "devDependencies": {
