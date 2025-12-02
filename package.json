@@ -1,6 +1,6 @@
 {
   "name": "svt-texttv-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for SVT Text-TV - Access Swedish teletext content (news, sports, weather, TV schedules) through the Model Context Protocol",
   "type": "module",
   "main": "dist/index.js",

@@ -1,7 +1,7 @@
 {
   "$schema": "https://registry.modelcontextprotocol.io/schemas/server.json",
   "name": "io.github.isakskogstad/svt-texttv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "display_name": "SVT Text-TV",
   "description": "Access Swedish SVT Text-TV content - news, sports, weather, and TV schedules",
   "description_long": "MCP server for SVT Text-TV. Provides tools to fetch Swedish teletext content including news (domestic and foreign), sports (football, hockey, results), weather forecasts (national and regional), and TV schedules (SVT1, SVT2). Data is sourced from texttv.nu.",
