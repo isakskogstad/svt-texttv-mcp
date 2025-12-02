@@ -1,15 +1,16 @@
+apiVersion: v1
 services:
   - type: web
     name: svt-texttv-mcp
-    runtime: node
-    plan: free
+    env: docker
+    branch: main
     region: frankfurt
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 10000
-    healthCheckPath: /health
-    autoDeploy: true
